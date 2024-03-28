@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="website.css" rel="stylesheet">
+    <title>Contact - Dimension 3</title>
+    <link rel="icon" href="https://jaxsonrox1.github.io/images/circle logo.ico">
+    <style>
+        .header {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            transition: transform 0.3s ease-in-out; /* Transition for smooth animation */
+            transform: translateY(0); /* Initially at original position */
+        }
+
+        .header.hidden {
+            transform: translateY(-100%); /* Move the header off-screen when hidden */
+        }
+
+        .header::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        body {
+            background-image: url(images/background.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+        }
+
+        @media (min-width: 1164px) {
+            .logo {
+                float: left
+            }
+            .options {
+            float: right;
+            margin-right: 26px;
+            }
+        }
+            
+
+        .logo img {
+            height: 100px;
+            margin-left: 10px;
+            margin-bottom: 0px;
+        }
+
+
+
+        .options button {
+            background-color: #ff0000;
+            color: #fff;
+            font-size: 25px;
+            padding: 10px;
+            margin-top: 25px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-family: 'Fredoka', sans-serif;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        .options button:hover {
+            background-color: blue;
+        }
+
+        .whitespace {
+            padding-bottom: 100px;
+            background-color: white;
+            opacity: 0.7;
+            border-radius: 20px;
+            position: relative;
+        }
+        h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 90px;
+            padding: 5px;
+            margin: 15px;
+        }
+        h2 {
+            font-family: 'Luckiest Guy', sans-serif;
+            font-size: 30px;
+        }
+        p {
+            font-family: 'Varela Round', sans-serif;
+            font-size: 25px;
+            padding: 0px;
+            margin: 5px;
+            margin-bottom: 17px;
+        }
+        .html {
+            width:2svw;
+            background-color: red;
+            
+        }
+        .field {
+        margin-bottom: 10px;
+        }
+
+        .field label {
+        display: block;
+        font-size: 20px;
+        color: black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-bottom: 7px;
+        }
+
+        .field input {
+        display: inline-block;
+        min-width: 250px;
+        width: 400px;
+        line-height: 1.5;
+        font-size: 14px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .message{
+            display: inline-block;
+            min-width: 400px;
+            max-width: 400px;
+            line-height: 1.5;
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            resize: none;
+        }
+
+        input[type="submit"] {
+        display: inline-block;
+        padding: 6px 30px;
+        font-size: 14px;
+        background-color: #4460AA;
+        color: #fff;
+        border: none
+        }
+
+        #form {
+            background-color: gray;
+            width: 500px;
+            height: 360px;
+            padding: 20px;
+            border: 7px solid black;
+            border-radius: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <center>
+            <img src="images/logo.png" alt="Logo">
+        </center>
+        </div>
+        <center>
+        <div class="options">
+            <button type="button" onclick="window.location='index.html'">Home Page</button>
+            <button type="button" onclick="window.location='about.html'">About Us</button>
+            <button type="button" onclick="window.location='contact.html'">Contact Us</button>
+            <button type="button" onclick="window.location='Catalog.html'">Catalog</button>
+            <button type="button" onclick="window.location='order.html'">Order Form</button>
+            <button style="background-color: transparent; border: 0px;"></button>
+            <button type="button" onclick="window.location='login.html'">Login</button>
+        </div>
+    </center>
+    </div>
+
+
+    <h1>Contact Us</h1>
+
+    <p style="font-size: 40px;">You can contact us using the form below, calling +1 (845) 213-9554, or emailing <a href="mailto:dim3n3ion@gmail.com" style="color: red;">dim3n3ion@gmail.com</a></p>
+
+
+    <center>
+    <form id="form">
+        <div class="field">
+          <label for="from_name">Name</label>
+          <input type="text" name="from_name" id="from_name">
+        </div>
+        <div class="field">
+          <label for="reply_to">Email Address</label>
+          <input type="text" name="reply_to" id="reply_to">
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea type="text" name="message" id="message" style="width: 250px; height: 150px;" class="message"> </textarea>
+        </div>
+      
+        <input type="submit" id="button" value="Send Email">
+    </form>
+    </center>  
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <script type="text/javascript">
+        emailjs.init('Uk4YjAF-46JKyiPNp')
+    </script>
+
+    <script>
+        const btn = document.getElementById('button');
+
+        document.getElementById('form')
+        .addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        btn.value = 'Sending...';
+
+        const serviceID = 'default_service';
+        const templateID = 'dimension_temp';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+            btn.value = 'Send Email';
+            alert('Message sent succesfully!');
+            }, (err) => {
+            btn.value = 'Send Email';
+            alert(JSON.stringify(err));
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="website.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <title>Catalog - Dimension 3</title>
+    <link rel="icon" href="https://jaxsonrox1.github.io/images/circle logo.ico">
+    <style>
+        .header {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            transition: transform 0.3s ease-in-out; /* Transition for smooth animation */
+            transform: translateY(0); /* Initially at original position */
+        }
+
+        .header.hidden {
+            transform: translateY(-100%); /* Move the header off-screen when hidden */
+        }
+
+        .header::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        body {
+            background-image: url(images/background.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+        }
+
+        @media (min-width: 1164px) {
+            .logo {
+                float: left
+            }
+            .options {
+            float: right;
+            margin-right: 26px;
+            }
+        }
+            
+
+        .logo img {
+            height: 100px;
+            margin-left: 10px;
+            margin-bottom: 0px;
+        }
+
+
+
+        .options button {
+            background-color: #ff0000;
+            color: #fff;
+            font-size: 25px;
+            padding: 10px;
+            margin-top: 25px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-family: 'Fredoka', sans-serif;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        .options button:hover {
+            background-color: blue;
+        }
+
+        .whitespace {
+            padding-bottom: 100px;
+            background-color: white;
+            opacity: 0.7;
+            border-radius: 20px;
+            position: relative;
+        }
+        h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 90px;
+        }
+        h2 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 25px;
+            color:black;
+            margin-top: 5px;
+            margin-left: 15px;
+            float: left;
+            text-align: left;
+        }
+        h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 25px;
+            color:gray;
+            margin-top: 40px;
+            margin-right: 15px;
+            margin-left: -45px;
+            margin-bottom: 40px;
+            float: left;
+        }
+        h4 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+            margin-top: -20px;
+            color: black;
+            float: left;
+            text-align: left;
+            margin-left: 15px;
+            margin-right: 20px;
+
+        }
+        p {
+            font-family: 'Varela Round', sans-serif;
+            font-size: 25px;
+        }
+        .html {
+            width:2svw;
+            background-color: red;
+            
+        }
+        .catalogItem {
+            width: 400px;
+            height: 175px;
+            background-color: #fff;
+            display: inline-block;
+            border-radius: 20px;
+            border: 5px solid black;
+            margin-top: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <center>
+            <img src="images/logo.png" alt="Logo">
+        </center>
+        </div>
+        <center>
+        <div class="options">
+            <button type="button" onclick="window.location='index.html'">Home Page</button>
+            <button type="button" onclick="window.location='about.html'">About Us</button>
+            <button type="button" onclick="window.location='contact.html'">Contact Us</button>
+            <button type="button" onclick="window.location='Catalog.html'">Catalog</button>
+            <button type="button" onclick="window.location='order.html'">Order Form</button>
+            <button style="background-color: transparent; border: 0px;"></button>
+            <button type="button" onclick="window.location='login.html'">Login</button>
+        </div>
+    </center>
+    </div>
+
+
+    <h1>Our Catalog</h1>
+
+    <div class="catalogItem">
+        <h2>Wallet <br> <span style="color: gray">$10.00</span></h2>
+        <h4>Make sure you never lose your money again with this wallet.</h4>
+    </div>
+
+    <div class="catalogItem">
+        <h2>Extendable Axe <br> <span style="color: gray">$20.00</span></h2>
+        <h4>A quality toy for people who have dreams of swinging an axe around but don't want to hurt anyone.</h4>
+    </div>    
+
+    <div class="catalogItem">
+        <h2>Extendable Katana <br> <span style="color: gray">$15.00</span></h2>
+        <h4>This katana is for you if you love Japanese fighting, light sabers, and Star Wars.</h4>
+    </div>
+
+    <div class="catalogItem">
+        <h2>Vase <br> <span style="color: gray">$17.00</span></h2>
+        <h4>With this beautiful vase, you'll never have to worry about your flowers again</h4>
+    </div>
+
+    <div class="catalogItem">
+        <h2>Rubber Band Gun <br> <span style="color: gray">$12.00</span></h2>
+        <h4>Have fun with this harmless gun and pelt your friends with rubber bands!</h4>
+    </div>
+
+    <div class="catalogItem">
+        <h2>Toothpick Gun <br> <span style="color: gray">$12.00</span></h2>
+        <h4>A normal gun that has a mechanism that allows you to shoot out toothpicks</h4>
+    </div>    
+
+    <div class="catalogItem">
+        <h2>Nunchucks <br> <span style="color: gray">$12.00</span></h2>
+        <h4>If you want to practice being a ninja this is for you</h4>
+    </div>
+
+    <div class="catalogItem">
+        <h2>Toy Boat <br> <span style="color: gray">$1.00</span></h2>
+        <h4>A quality display toy that can be used in the bath for little kids for only 1 dollar</h4>
+    </div>
+
+    <div class="catalogItem">
+        <h2>Demon Face Replica <br> <span style="color: gray">$12.00</span></h2>
+        <h4>Something creepy to hang in your bedroom</h4>
+    </div>
+
+    <div class="catalogItem">
+        <h2>Demon Mask<br> <span style="color: gray">$30.00</span></h2>
+        <h4>Prepare to take scaring your friends to a whole different <i>"dimension."</i></h4>
+    </div>
+
+    <div class="catalogItem">
+        <h2>Phone Stand <br> <span style="color: gray">$7.00</span></h2>
+        <h4>A place to keep your phone without having to lose it every 2 days</h4>
+    </div>
+    
+    <div class="catalogItem">
+        <h2>Desktop Organizer A<br> <span style="color: gray">$15.00</span></h2>
+        <h4>For people who like their desks nice and neat.</h4>
+    </div>
+
+    <div class="catalogItem">
+        <h2>Castle <br> <span style="color: gray">$25.00</span></h2>
+        <h4>A super cool model castle to put on your desk</h4>
+    </div>
+
+    <div class="catalogItem">
+        <h2>Neuschwanstein Castle <br> <span style="color: gray">$50.00</span></h2>
+        <h4>An old-fashioned castle straight from the 17 hundreds</h4>
+    </div>
+
+    <div class="catalogItem">
+        <h2>Mini Skeleton <br> <span style="color: gray">$10.00</span></h2>
+        <h4>Scare your friends with this frightening model skeleton!</h4>
+    </div>
+    
+    <div class="catalogItem">
+        <h2>Full-Sized Skeleton <br> <span style="color: gray">$15.00</span></h2>
+        <h4>For just $5 more you can freak your friends out even more with this full-sized skeleton!</h4>
+    </div>
+    
+    <div class="catalogItem">
+        <h2>Rotating Rings <br> <span style="color: gray">$7.00</span></h2>
+        <h4>A cool fidget toy that endlessly spins around in your hands!</h4>
+    </div>
+    
+    <div class="catalogItem">
+        <h2>Bolt Fidget <br> <span style="color: gray">$12.00</span></h2>
+        <h4>A cool fidget toy that can help strengthen your hand muscles. This one looks like a real bolt!</h4>
+    </div>
+    
+    <div class="catalogItem">
+        <h2>Clicker Fidget <br> <span style="color: gray">$7.00</span></h2>
+        <h4>A click fidget for kids with short attention spans and long classes!</h4>
+    </div>
+    
+    <div class="catalogItem">
+        <h2>Dice <br> <span style="color: gray">$5.00</span></h2>
+        <h4>Buy a classic 1-6 die for only 5 bucks!</h4>
+    </div>
+    
+    <div class="catalogItem">
+        <h2>iPhone 13 Case <br> <span style="color: gray">$10.00</span></h2>
+        <h4>Make sure your expensive iPhone 13 doesn't crack and protect it with this cheap case!</h4>
+    </div>
+    
+    <div class="catalogItem">
+        <h2>Extendable Baton <br> <span style="color: gray">$15.00</span></h2>
+        <h4>A great add-on for your police costume!</h4>
+      </div>
+      
+      <div class="catalogItem">
+        <h2>Eiffel Tower <br> <span style="color: gray">$10.00</span></h2>
+        <h4>Why go to Paris to see the Eiffel Tower if you can have your own miniature version on your shelf?</h4>
+      </div>
+      
+      <div class="catalogItem">
+        <h2>Orc Mask <br> <span style="color: gray">$30.00</span></h2>
+        <h4>Ever wanted to look like those monsters in fantasy books? Now you can with this Orc Mask!</h4>
+      </div>
+      
+      <div class="catalogItem">
+        <h2>Unofficial Lego Base Plate <br> <span style="color: gray">$12.00</span></h2>
+        <h4>Get a super useful base plate for your Lego set!</h4>
+      </div>
+      
+      <div class="catalogItem">
+        <h2>Dice Meteor Hammer <br> <span style="color: gray">$15.00</span></h2>
+        <h4>It's super fun to swing around and pretend to capture people in its chain, just like a real meteor hammer!</h4>
+      </div>
+      
+      <div class="catalogItem">
+        <h2>Pen And Pencil Box <br> <span style="color: gray">$10.00</span></h2>
+        <h4>A container to keep all your pens and pencils organized.</h4>
+      </div>
+      
+      <div class="catalogItem">
+        <h2>Desk Organizer B <br> <span style="color: gray">$10.00</span></h2>
+        <h4>Another option for people who like to keep their desks neat. This one has a different design than Desk Organizer A.</h4>
+      </div>
+      
+      <div class="catalogItem">
+        <h2>Egg Holder <br> <span style="color: gray">$3.00</span></h2>
+        <h4>A useful egg holder to help you with cooking and baking.</h4>
+      </div>
+      
+      <div class="catalogItem">
+        <h2>Zelda Sword <br> <span style="color: gray">$15.00</span></h2>
+        <h4>Become Link with this super cool Master Sword! Just remember, it might not actually fight monsters.</h4>
+      </div>
+      
+      <div class="catalogItem">
+        <h2>Treasure Chest <br> <span style="color: gray">$10.00</span></h2>
+        <h4>A place to store all your hidden treasure, like candy, small toys, or secret notes!</h4>
+      </div>
+      
+      <div class="catalogItem">
+        <h2>USB Holder <br> <span style="color: gray">$10.00</span></h2>
+        <h4>A safe spot to prevent your USB from getting scratched or lost.</h4>
+      </div>
+      
+      <div class="catalogItem">
+        <h2>Coaster <br> <span style="color: gray">$5.00</span></h2>
+        <h4>Enjoy your cup of coffee or tea even more with this handy coaster.</h4>
+      </div>
+      
+
+</body>
+</html>
+
+
+
+
+

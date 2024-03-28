@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="website.css" rel="stylesheet">
+    <title>Home - Dimension 3</title>
+    <link rel="icon" href="https://jaxsonrox1.github.io/images/circle logo.ico">
+    <style>
+        .header {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            transition: transform 0.3s ease-in-out; /* Transition for smooth animation */
+            transform: translateY(0); /* Initially at original position */
+        }
+
+        .header.hidden {
+            transform: translateY(-100%); /* Move the header off-screen when hidden */
+        }
+
+        .header::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        body {
+            background-image: url(images/background.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+        }
+
+        @media (min-width: 1164px) {
+            .logo {
+                float: left
+            }
+            .options {
+            float: right;
+            margin-right: 26px;
+            }
+        }
+            
+
+        .logo img {
+            height: 100px;
+            margin-left: 10px;
+            margin-bottom: 0px;
+        }
+
+
+
+        .options button {
+            background-color: #ff0000;
+            color: #fff;
+            font-size: 25px;
+            padding: 10px;
+            margin-top: 25px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-family: 'Fredoka', sans-serif;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        .options button:hover {
+            background-color: blue;
+        }
+
+        .whitespace {
+            padding-bottom: 100px;
+            background-color: white;
+            opacity: 0.7;
+            border-radius: 20px;
+            position: relative;
+        }
+        h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 90px;
+        }
+        h2 {
+            font-family: 'Luckiest Guy', sans-serif;
+            font-size: 30px;
+        }
+        p {
+            font-family: 'Varela Round', sans-serif;
+            font-size: 25px;
+        }
+        .html {
+            width:2svw;
+            background-color: red;
+            
+        }
+        .showcase {
+            width: 700px;
+            height: 300px;
+            background-color: rgb(68, 68, 68);
+            border: 5px solid black;
+            border-radius: 50px;
+            padding: 40px;
+            margin: 20px;
+            display: inline-block;
+        }
+        .showcase2 {
+            width: 430px;
+            height: 300px;
+            background-color: rgb(66, 66, 66);
+            border: 5px solid black;
+            border-radius: 50px;
+            padding: 40px;
+            margin: 20px;
+            display: inline-table;
+        }
+        .showcaseHeader {
+            font-size: 75px;
+            color: black;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            float: center;
+            margin: 0;
+        }
+        .showcaseImage {
+            height: auto;
+            width: 200px;
+            float: right;
+            margin-right: 40px;
+        }
+        .showcaseDesc {
+            justify-content: center;
+            font-size: 30px;
+        }
+        .showcase2Header {
+            font-size: 75px;
+            color: black;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            float: center;
+            margin: 0;
+        }
+        .showcase2Image {
+            height: auto;
+            width: 200px;
+            float: right;
+            margin-right: 7px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <center>
+            <img src="images/logo.png" alt="Logo">
+        </center>
+        </div>
+        <center>
+        <div class="options">
+            <button type="button" onclick="window.location='index.html'">Home Page</button>
+            <button type="button" onclick="window.location='about.html'">About Us</button>
+            <button type="button" onclick="window.location='contact.html'">Contact Us</button>
+            <button type="button" onclick="window.location='Catalog.html'">Catalog</button>
+            <button type="button" onclick="window.location='order.html'">Order Form</button>
+            <button style="background-color: transparent; border: 0px;"></button>
+            <button type="button" onclick="window.location='login.html'">Login</button>
+        </div>
+    </center>
+    </div>
+
+
+    <h1>Welcome to the <span style="color: #ff0000;"> Dimension 3 </span> website! </h1>
+
+    <p>Here are some showcases of our products:</p>
+  
+    <div class="showcase">
+      <p class="showcaseHeader">Extendable Axe</p>
+      <img class="showcaseImage" src="images/items/axe.png">
+      <p class="showcaseDesc">A quality toy for people who have dreams of swinging an axe around but dont want to hurt anyone.</p>
+      <p class="showcaseDesc" style="font-size: 20px; color: gray;"> Part 1/3 In The Extendable Series</p>
+    </div>
+  
+    <div class="showcase">
+        <p class="showcaseHeader" style="font-size: 73px;">Extendable Katana</p>
+        <img class="showcaseImage" src="images/items/katana.png">
+        <p class="showcaseDesc" style="font-size: 30px;">This katana is for you if you love japanese fighting, light sabers, and Star Wars. Just make sure you dont hit anyone (too hard!)</p>
+        <p class="showcaseDesc" style="font-size: 20px; color: gray;"> Part 2/3 In The Extendable Series</p>
+    </div>
+    <div class="showcase2">
+        <p class="showcase2Header">Toy Boat</p>
+        <img src="images/items/boat.png" class="showcase2Image">
+        <p class="showcaseDesc">A quality display toy that can be used in the bath for little kids</p>
+    </div>
+        
+    <div class="showcase2">
+        <p class="showcase2Header">Organizer</p>
+        <img src="images/items/organizer.png" class="showcase2Image" style="width: 250px; margin-right: 0px">
+        <p class="showcaseDesc">For people who like their desks nice and neat.</p>
+    </div>
+  
+    <div class="showcase2">
+        <p class="showcase2Header">Clicker</p>
+        <img src="images/items/clicker.png" class="showcase2Image" style="width: 180px; margin-left: 15px; margin-top: 10px;">
+        <p class="showcaseDesc" style="margin-bottom: 0px;">A click fidget for kids with short attention spans!</p>
+        <p class="showcaseDesc" style="font-size: 20px; color: gray; margin-bottom: 0px;"> Part 1/2 In The Fidget Series</p>
+    </div>
+  
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBkCcboeNwzsJ7UqKqn3SvAjm1zcnAwE60",
+          authDomain: "dimension-3.firebaseapp.com",
+          projectId: "dimension-3",
+          storageBucket: "dimension-3.appspot.com",
+          messagingSenderId: "80105615199",
+          appId: "1:80105615199:web:944cf1e79eac35f7aed0ea",
+          measurementId: "G-9250P6ZTPL"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+</body>
+</html>
+
+
+
+
+

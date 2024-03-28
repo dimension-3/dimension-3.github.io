@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="website.css" rel="stylesheet">
+    <title>Order - Dimension 3</title>
+    <link rel="icon" href="https://jaxsonrox1.github.io/images/circle logo.ico">
+    <style>
+        .header {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            transition: transform 0.3s ease-in-out; /* Transition for smooth animation */
+            transform: translateY(0); /* Initially at original position */
+        }
+
+        .header.hidden {
+            transform: translateY(-100%); /* Move the header off-screen when hidden */
+        }
+
+        .header::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        body {
+            background-image: url(images/background.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            color: white;
+        }
+
+        @media (min-width: 1164px) {
+            .logo {
+                float: left
+            }
+            .options {
+            float: right;
+            margin-right: 26px;
+            }
+        }
+            
+
+        .logo img {
+            height: 100px;
+            margin-left: 10px;
+            margin-bottom: 0px;
+        }
+
+
+
+        .options button {
+            background-color: #ff0000;
+            color: #fff;
+            font-size: 25px;
+            padding: 10px;
+            margin-top: 25px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-family: 'Fredoka', sans-serif;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        .options button:hover {
+            background-color: blue;
+        }
+
+        .whitespace {
+            padding-bottom: 100px;
+            background-color: white;
+            opacity: 0.7;
+            border-radius: 20px;
+            position: relative;
+        }
+        h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 90px;
+        }
+        .html {
+            width:2svw;
+            background-color: red;
+            
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <center>
+            <img src="images/logo.png" alt="Logo">
+        </center>
+        </div>
+        <center>
+        <div class="options">
+            <button type="button" onclick="window.location='index.html'">Home Page</button>
+            <button type="button" onclick="window.location='about.html'">About Us</button>
+            <button type="button" onclick="window.location='contact.html'">Contact Us</button>
+            <button type="button" onclick="window.location='Catalog.html'">Catalog</button>
+            <button type="button" onclick="window.location='order.html'">Order Form</button>
+            <button style="background-color: transparent; border: 0px;"></button>
+            <button type="button" onclick="window.location='login.html'">Login</button>
+        </div>
+    </center>
+    </div>
+
+
+    <script src="https://cdn02.jotfor.ms/static/prototype.forms.js?v=3.3.52679" type="text/javascript"></script>
+    <script src="https://cdn03.jotfor.ms/static/jotform.forms.js?v=3.3.52679" type="text/javascript"></script>
+    <script src="https://cdn01.jotfor.ms/js/punycode-1.4.1.min.js?v=3.3.52679" type="text/javascript" defer></script>
+    <script src="https://cdn02.jotfor.ms/js/vendor/maskedinput_5.0.9.min.js?v=3.3.52679" type="text/javascript"></script>
+    <script src="https://cdn01.jotfor.ms/s/umd/95427b705d9/for-widgets-server.js?v=3.3.52679" type="text/javascript"></script>
+    <script type="text/javascript">	JotForm.newDefaultTheme = true;
+        JotForm.extendsNewTheme = false;
+        JotForm.singleProduct = false;
+        JotForm.newPaymentUIForNewCreatedForms = false;
+        JotForm.texts = {"confirmEmail":"E-mail does not match","pleaseWait":"Please wait...","validateEmail":"You need to validate this e-mail","confirmClearForm":"Are you sure you want to clear the form","lessThan":"Your score should be less than or equal to","incompleteFields":"There are incomplete required fields. Please complete them.","required":"This field is required.","requireOne":"At least one field required.","requireEveryRow":"Every row is required.","requireEveryCell":"Every cell is required.","email":"Enter a valid e-mail address","alphabetic":"This field can only contain letters","numeric":"This field can only contain numeric values","alphanumeric":"This field can only contain letters and numbers.","cyrillic":"This field can only contain cyrillic characters","url":"This field can only contain a valid URL","currency":"This field can only contain currency values.","fillMask":"Field value must fill mask.","uploadExtensions":"You can only upload following files:","noUploadExtensions":"File has no extension file type (e.g. .txt, .png, .jpeg)","uploadFilesize":"File size cannot be bigger than:","uploadFilesizemin":"File size cannot be smaller than:","gradingScoreError":"Score total should only be less than or equal to","inputCarretErrorA":"Input should not be less than the minimum value:","inputCarretErrorB":"Input should not be greater than the maximum value:","maxDigitsError":"The maximum digits allowed is","minCharactersError":"The number of characters should not be less than the minimum value:","maxCharactersError":"The number of characters should not be more than the maximum value:","freeEmailError":"Free email accounts are not allowed","minSelectionsError":"The minimum required number of selections is ","maxSelectionsError":"The maximum number of selections allowed is ","pastDatesDisallowed":"Date must not be in the past.","dateLimited":"This date is unavailable.","dateInvalid":"This date is not valid. The date format is {format}","dateInvalidSeparate":"This date is not valid. Enter a valid {element}.","ageVerificationError":"You must be older than {minAge} years old to submit this form.","multipleFileUploads_typeError":"{file} has invalid extension. Only {extensions} are allowed.","multipleFileUploads_sizeError":"{file} is too large, maximum file size is {sizeLimit}.","multipleFileUploads_minSizeError":"{file} is too small, minimum file size is {minSizeLimit}.","multipleFileUploads_emptyError":"{file} is empty, please select files again without it.","multipleFileUploads_uploadFailed":"File upload failed, please remove it and upload the file again.","multipleFileUploads_onLeave":"The files are being uploaded, if you leave now the upload will be cancelled.","multipleFileUploads_fileLimitError":"Only {fileLimit} file uploads allowed.","dragAndDropFilesHere_infoMessage":"Drag and drop files here","chooseAFile_infoMessage":"Choose a file","maxFileSize_infoMessage":"Max. file size","generalError":"There are errors on the form. Please fix them before continuing.","generalPageError":"There are errors on this page. Please fix them before continuing.","wordLimitError":"Too many words. The limit is","wordMinLimitError":"Too few words.  The minimum is","characterLimitError":"Too many Characters.  The limit is","characterMinLimitError":"Too few characters. The minimum is","ccInvalidNumber":"Credit Card Number is invalid.","ccInvalidCVC":"CVC number is invalid.","ccInvalidExpireDate":"Expire date is invalid.","ccInvalidExpireMonth":"Expiration month is invalid.","ccInvalidExpireYear":"Expiration year is invalid.","ccMissingDetails":"Please fill up the credit card details.","ccMissingProduct":"Please select at least one product.","ccMissingDonation":"Please enter numeric values for donation amount.","disallowDecimals":"Please enter a whole number.","restrictedDomain":"This domain is not allowed","ccDonationMinLimitError":"Minimum amount is {minAmount} {currency}","requiredLegend":"All fields marked with * are required and must be filled.","geoPermissionTitle":"Permission Denied","geoPermissionDesc":"Check your browser's privacy settings.","geoNotAvailableTitle":"Position Unavailable","geoNotAvailableDesc":"Location provider not available. Please enter the address manually.","geoTimeoutTitle":"Timeout","geoTimeoutDesc":"Please check your internet connection and try again.","selectedTime":"Selected Time","formerSelectedTime":"Former Time","cancelAppointment":"Cancel Appointment","cancelSelection":"Cancel Selection","noSlotsAvailable":"No slots available","slotUnavailable":"{time} on {date} has been selected is unavailable. Please select another slot.","multipleError":"There are {count} errors on this page. Please correct them before moving on.","oneError":"There is {count} error on this page. Please correct it before moving on.","doneMessage":"Well done! All errors are fixed.","invalidTime":"Enter a valid time","doneButton":"Done","reviewSubmitText":"Review and Submit","nextButtonText":"Next","prevButtonText":"Previous","seeErrorsButton":"See Errors","notEnoughStock":"Not enough stock for the current selection","notEnoughStock_remainedItems":"Not enough stock for the current selection ({count} items left)","soldOut":"Sold Out","justSoldOut":"Just Sold Out","selectionSoldOut":"Selection Sold Out","subProductItemsLeft":"({count} items left)","startButtonText":"START","submitButtonText":"Submit","submissionLimit":"Sorry! Only one entry is allowed. Multiple submissions are disabled for this form.","reviewBackText":"Back to Form","seeAllText":"See All","progressMiddleText":"of","fieldError":"field has an error.","error":"Error"};
+        JotForm.newPaymentUI = true;
+        JotForm.replaceTagTest = true;
+        JotForm.clearFieldOnHide="disable";
+        JotForm.submitError="jumpToFirstError";
+        window.addEventListener('DOMContentLoaded',function(){window.brandingFooter.init({"formID":240844084744157,"campaign":"powered_by_jotform_le","isCardForm":false,"isLegacyForm":true})});	JotForm.isFullSource = true;
+    
+        JotForm.init(function(){
+        /*INIT-START*/
+          JotForm.setPhoneMaskingValidator( 'input_12_full', '\u0028\u0023\u0023\u0023\u0029 \u0023\u0023\u0023\u002d\u0023\u0023\u0023\u0023' );
+    if (window.JotForm && JotForm.accessible) $('input_18').setAttribute('tabindex',0);
+          JotForm.setCustomHint( 'input_18', 'Any specific color, design, etc' );
+        /*INIT-END*/
+        });
+    
+       setTimeout(function() {
+    JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"name":"heading","qid":"9","text":"Dimension 3 Order Form","type":"control_head"},{"description":"","name":"fullName","qid":"10","text":"Full Name","type":"control_fullname"},{"description":"","name":"emailAddress","qid":"11","subLabel":"example@example.com","text":"Email Address","type":"control_email"},{"description":"","name":"phoneNumber","qid":"12","text":"Phone Number","type":"control_phone"},{"description":"","name":"address","qid":"13","text":"Address Information","type":"control_address"},null,{"name":"terms","qid":"15","text":"Terms and Conditions","type":"control_widget"},{"name":"submit","qid":"16","text":"Submit","type":"control_button"},{"description":"","name":"3dPrinted18","qid":"17","subLabel":"","text":"3D Printed Objects","type":"control_dropdown"},{"description":"","mde":"No","name":"notes","qid":"18","subLabel":"Notes","text":"Notes","type":"control_textarea","wysiwyg":"Disable"}]);}, 20); 
+    </script>
+    <link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/stylebuilder/static/form-common.css?v=d0f72cd
+    "/>
+    <style type="text/css">@media print{*{-webkit-print-color-adjust: exact !important;color-adjust: exact !important;}.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+    <link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.52679&themeRevisionID=65660e4b326633110492e01a"/>
+    <link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_styles.css?3.3.52679" />
+    <link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/css/styles/payment/payment_feature.css?3.3.52679" />
+    <style type="text/css" id="form-designer-style">
+        /* Injected CSS Code */
+    /*PREFERENCES STYLE*/.form-all {font-family: Inter, sans-serif;}.form-label.form-label-auto {
+    display: block;
+    float: none;
+    text-align: left;
+    width: 100%;}.form-line { margin-top: 12px; margin-bottom: 12px;}.form-all {max-width: 752px;width: 100%;}.form-label.form-label-left,.form-label.form-label-right,.form-label.form-label-left.form-label-auto,.form-label.form-label-right.form-label-auto {width: 230px;}.form-all {font-size: 16px}
+        .supernova {
+            background-color: #F3F3FE;
+        }
+        .supernova body {
+            background: transparent;
+        }
+            
+            .supernova .form-all, .form-all {
+                background-color: #FFFFFF;
+            }
+            
+        .form-all {
+          color: #2C3345;
+        }
+        .form-header-group .form-header {
+          color: #2C3345;
+        }
+        .form-header-group .form-subHeader {
+          color: #2C3345;
+        }
+        .form-label-top,
+        .form-label-left,
+        .form-label-right,
+        .form-html,
+        .form-checkbox-item label,
+        .form-radio-item label,
+        span.FITB .qb-checkbox-label,
+        span.FITB .qb-radiobox-label,
+        span.FITB .form-radio label,
+        span.FITB .form-checkbox label,
+        [data-blotid][data-type=checkbox] [data-labelid],
+        [data-blotid][data-type=radiobox] [data-labelid],
+        span.FITB-inptCont[data-type=checkbox] label,
+        span.FITB-inptCont[data-type=radiobox] label {
+          color: #2C3345;
+        }
+        .form-sub-label {
+          color: #2C3345;
+        }
+            
+        .form-textbox,
+        .form-textarea,
+        .form-dropdown,
+        .form-radio-other-input,
+        .form-checkbox-other-input,
+        .form-captcha input,
+        .form-spinner input {
+          background-color: #FFFFFF;
+        }
+            
+        .form-line-error {
+          overflow: hidden;
+          transition: none;
+          background-color: #FFF4F4;
+        }
+    
+        .form-line-error .form-error-message {
+          background-color: #DC2626;
+          clear: both;
+          float: none;
+        }
+    
+        .form-line-error .form-error-arrow {
+          border-bottom-color: #FF3200;
+        }
+    
+        .form-line-error input:not(#coupon-input),
+        .form-line-error textarea,
+        .form-line-error .form-validation-error {
+          border: 1px solid #c61515;
+          box-shadow: 0 0 3px #c61515;
+        }
+            
+        
+        .supernova {
+          background-repeat: no-repeat;
+          background-size: auto;
+          background-attachment: scroll;
+          background-position: center top;
+        }
+            
+    
+        .supernova, #stage {
+            background-image: none;
+        }
+                
+          .form-all {
+            background-image: none;
+          }
+                /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
+        /* Injected CSS Code */
+    </style>
+    
+    <script src="https://cdn02.jotfor.ms/static/prototype.forms.js?v=3.3.52681" type="text/javascript"></script>
+    <script src="https://cdn03.jotfor.ms/static/jotform.forms.js?v=3.3.52681" type="text/javascript"></script>
+    <script src="https://cdn01.jotfor.ms/js/punycode-1.4.1.min.js?v=3.3.52681" type="text/javascript" defer></script>
+    <script src="https://cdn02.jotfor.ms/js/vendor/maskedinput_5.0.9.min.js?v=3.3.52681" type="text/javascript"></script>
+    <script type="text/javascript">	JotForm.newDefaultTheme = true;
+        JotForm.extendsNewTheme = false;
+        JotForm.singleProduct = false;
+        JotForm.newPaymentUIForNewCreatedForms = false;
+        JotForm.texts = {"confirmEmail":"E-mail does not match","pleaseWait":"Please wait...","validateEmail":"You need to validate this e-mail","confirmClearForm":"Are you sure you want to clear the form","lessThan":"Your score should be less than or equal to","incompleteFields":"There are incomplete required fields. Please complete them.","required":"This field is required.","requireOne":"At least one field required.","requireEveryRow":"Every row is required.","requireEveryCell":"Every cell is required.","email":"Enter a valid e-mail address","alphabetic":"This field can only contain letters","numeric":"This field can only contain numeric values","alphanumeric":"This field can only contain letters and numbers.","cyrillic":"This field can only contain cyrillic characters","url":"This field can only contain a valid URL","currency":"This field can only contain currency values.","fillMask":"Field value must fill mask.","uploadExtensions":"You can only upload following files:","noUploadExtensions":"File has no extension file type (e.g. .txt, .png, .jpeg)","uploadFilesize":"File size cannot be bigger than:","uploadFilesizemin":"File size cannot be smaller than:","gradingScoreError":"Score total should only be less than or equal to","inputCarretErrorA":"Input should not be less than the minimum value:","inputCarretErrorB":"Input should not be greater than the maximum value:","maxDigitsError":"The maximum digits allowed is","minCharactersError":"The number of characters should not be less than the minimum value:","maxCharactersError":"The number of characters should not be more than the maximum value:","freeEmailError":"Free email accounts are not allowed","minSelectionsError":"The minimum required number of selections is ","maxSelectionsError":"The maximum number of selections allowed is ","pastDatesDisallowed":"Date must not be in the past.","dateLimited":"This date is unavailable.","dateInvalid":"This date is not valid. The date format is {format}","dateInvalidSeparate":"This date is not valid. Enter a valid {element}.","ageVerificationError":"You must be older than {minAge} years old to submit this form.","multipleFileUploads_typeError":"{file} has invalid extension. Only {extensions} are allowed.","multipleFileUploads_sizeError":"{file} is too large, maximum file size is {sizeLimit}.","multipleFileUploads_minSizeError":"{file} is too small, minimum file size is {minSizeLimit}.","multipleFileUploads_emptyError":"{file} is empty, please select files again without it.","multipleFileUploads_uploadFailed":"File upload failed, please remove it and upload the file again.","multipleFileUploads_onLeave":"The files are being uploaded, if you leave now the upload will be cancelled.","multipleFileUploads_fileLimitError":"Only {fileLimit} file uploads allowed.","dragAndDropFilesHere_infoMessage":"Drag and drop files here","chooseAFile_infoMessage":"Choose a file","maxFileSize_infoMessage":"Max. file size","generalError":"There are errors on the form. Please fix them before continuing.","generalPageError":"There are errors on this page. Please fix them before continuing.","wordLimitError":"Too many words. The limit is","wordMinLimitError":"Too few words.  The minimum is","characterLimitError":"Too many Characters.  The limit is","characterMinLimitError":"Too few characters. The minimum is","ccInvalidNumber":"Credit Card Number is invalid.","ccInvalidCVC":"CVC number is invalid.","ccInvalidExpireDate":"Expire date is invalid.","ccInvalidExpireMonth":"Expiration month is invalid.","ccInvalidExpireYear":"Expiration year is invalid.","ccMissingDetails":"Please fill up the credit card details.","ccMissingProduct":"Please select at least one product.","ccMissingDonation":"Please enter numeric values for donation amount.","disallowDecimals":"Please enter a whole number.","restrictedDomain":"This domain is not allowed","ccDonationMinLimitError":"Minimum amount is {minAmount} {currency}","requiredLegend":"All fields marked with * are required and must be filled.","geoPermissionTitle":"Permission Denied","geoPermissionDesc":"Check your browser's privacy settings.","geoNotAvailableTitle":"Position Unavailable","geoNotAvailableDesc":"Location provider not available. Please enter the address manually.","geoTimeoutTitle":"Timeout","geoTimeoutDesc":"Please check your internet connection and try again.","selectedTime":"Selected Time","formerSelectedTime":"Former Time","cancelAppointment":"Cancel Appointment","cancelSelection":"Cancel Selection","noSlotsAvailable":"No slots available","slotUnavailable":"{time} on {date} has been selected is unavailable. Please select another slot.","multipleError":"There are {count} errors on this page. Please correct them before moving on.","oneError":"There is {count} error on this page. Please correct it before moving on.","doneMessage":"Well done! All errors are fixed.","invalidTime":"Enter a valid time","doneButton":"Done","reviewSubmitText":"Review and Submit","nextButtonText":"Next","prevButtonText":"Previous","seeErrorsButton":"See Errors","notEnoughStock":"Not enough stock for the current selection","notEnoughStock_remainedItems":"Not enough stock for the current selection ({count} items left)","soldOut":"Sold Out","justSoldOut":"Just Sold Out","selectionSoldOut":"Selection Sold Out","subProductItemsLeft":"({count} items left)","startButtonText":"START","submitButtonText":"Submit","submissionLimit":"Sorry! Only one entry is allowed. Multiple submissions are disabled for this form.","reviewBackText":"Back to Form","seeAllText":"See All","progressMiddleText":"of","fieldError":"field has an error.","error":"Error"};
+        JotForm.newPaymentUI = true;
+        JotForm.replaceTagTest = true;
+        JotForm.clearFieldOnHide="disable";
+        JotForm.submitError="jumpToFirstError";
+        window.addEventListener('DOMContentLoaded',function(){window.brandingFooter.init({"formID":240844084744157,"campaign":"powered_by_jotform_le","isCardForm":false,"isLegacyForm":true})});	JotForm.isFullSource = true;
+    
+        JotForm.init(function(){
+        /*INIT-START*/
+          JotForm.setPhoneMaskingValidator( 'input_12_full', '\u0028\u0023\u0023\u0023\u0029 \u0023\u0023\u0023\u002d\u0023\u0023\u0023\u0023' );
+    if (window.JotForm && JotForm.accessible) $('input_18').setAttribute('tabindex',0);
+          JotForm.setCustomHint( 'input_18', 'Any specific color, design, etc' );
+        /*INIT-END*/
+        });
+    
+       setTimeout(function() {
+    JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"name":"heading","qid":"9","text":"Dimension 3 Order Form","type":"control_head"},{"description":"","name":"fullName","qid":"10","text":"Full Name","type":"control_fullname"},{"description":"","name":"emailAddress","qid":"11","subLabel":"example@example.com","text":"Email Address","type":"control_email"},{"description":"","name":"phoneNumber","qid":"12","text":"Phone Number","type":"control_phone"},{"description":"","name":"address","qid":"13","text":"Address Information","type":"control_address"},null,null,{"name":"submit","qid":"16","text":"Submit","type":"control_button"},{"description":"","name":"3dPrinted18","qid":"17","subLabel":"","text":"3D Printed Objects","type":"control_dropdown"},{"description":"","mde":"No","name":"notes","qid":"18","subLabel":"Notes","text":"Notes","type":"control_textarea","wysiwyg":"Disable"}]);}, 20); 
+    </script>
+    <link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/stylebuilder/static/form-common.css?v=d0f72cd
+    "/>
+    <style type="text/css">@media print{*{-webkit-print-color-adjust: exact !important;color-adjust: exact !important;}.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+    <link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.52681&themeRevisionID=65660e4b326633110492e01a"/>
+    <link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_styles.css?3.3.52681" />
+    <link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/css/styles/payment/payment_feature.css?3.3.52681" />
+    <style type="text/css" id="form-designer-style">
+        /* Injected CSS Code */
+    /*PREFERENCES STYLE*/.form-all {font-family: Inter, sans-serif;}.form-label.form-label-auto {
+    display: block;
+    float: none;
+    text-align: left;
+    width: 100%;}.form-line { margin-top: 12px; margin-bottom: 12px;}.form-all {max-width: 752px;width: 100%;}.form-label.form-label-left,.form-label.form-label-right,.form-label.form-label-left.form-label-auto,.form-label.form-label-right.form-label-auto {width: 230px;}.form-all {font-size: 16px}
+        .supernova {
+            background-color: #F3F3FE;
+        }
+        .supernova body {
+            background: transparent;
+        }
+            
+            .supernova .form-all, .form-all {
+                background-color: #FFFFFF;
+            }
+            
+        .form-all {
+          color: #2C3345;
+        }
+        .form-header-group .form-header {
+          color: #2C3345;
+        }
+        .form-header-group .form-subHeader {
+          color: #2C3345;
+        }
+        .form-label-top,
+        .form-label-left,
+        .form-label-right,
+        .form-html,
+        .form-checkbox-item label,
+        .form-radio-item label,
+        span.FITB .qb-checkbox-label,
+        span.FITB .qb-radiobox-label,
+        span.FITB .form-radio label,
+        span.FITB .form-checkbox label,
+        [data-blotid][data-type=checkbox] [data-labelid],
+        [data-blotid][data-type=radiobox] [data-labelid],
+        span.FITB-inptCont[data-type=checkbox] label,
+        span.FITB-inptCont[data-type=radiobox] label {
+          color: #2C3345;
+        }
+        .form-sub-label {
+          color: #2C3345;
+        }
+            
+        .form-textbox,
+        .form-textarea,
+        .form-dropdown,
+        .form-radio-other-input,
+        .form-checkbox-other-input,
+        .form-captcha input,
+        .form-spinner input {
+          background-color: #FFFFFF;
+        }
+            
+        .form-line-error {
+          overflow: hidden;
+          transition: none;
+          background-color: #FFF4F4;
+        }
+    
+        .form-line-error .form-error-message {
+          background-color: #DC2626;
+          clear: both;
+          float: none;
+        }
+    
+        .form-line-error .form-error-arrow {
+          border-bottom-color: #FF3200;
+        }
+    
+        .form-line-error input:not(#coupon-input),
+        .form-line-error textarea,
+        .form-line-error .form-validation-error {
+          border: 1px solid #c61515;
+          box-shadow: 0 0 3px #c61515;
+        }
+            
+        
+        .supernova {
+          background-repeat: no-repeat;
+          background-size: auto;
+          background-attachment: scroll;
+          background-position: center top;
+        }
+            
+    
+        .supernova, #stage {
+            background-image: none;
+        }
+                
+          .form-all {
+            background-image: none;
+          }
+                /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
+        /* Injected CSS Code */
+    </style>
+    
+    <form class="jotform-form" onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();" action="https://submit.jotform.com/submit/240844084744157" method="post" name="form_240844084744157" id="240844084744157" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="240844084744157" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" /><input type="hidden" id="jsExecutionTracker" name="jsExecutionTracker" value="build-date-1711380995828" /><input type="hidden" id="submitSource" name="submitSource" value="unknown" /><input type="hidden" id="buildDate" name="buildDate" value="1711380995828" />
+      <div role="main" class="form-all">
+        <ul class="form-section page-section">
+          <li id="cid_9" class="form-input-wide" data-type="control_head">
+            <div class="form-header-group  header-large">
+              <div class="header-text httal htvam">
+                <h1 id="header_9" class="form-header" data-component="header">Dimension 3 Order Form</h1>
+                <div id="subHeader_9" class="form-subHeader">Please complete the form to order your 3D printed objects.</div>
+              </div>
+            </div>
+          </li>
+          <li class="form-line jf-required" data-type="control_fullname" id="id_10"><label class="form-label form-label-top form-label-auto" id="label_10" for="first_10" aria-hidden="false"> Full Name<span class="form-required">*</span> </label>
+            <div id="cid_10" class="form-input-wide jf-required" data-layout="full">
+              <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_10" name="q10_fullName[first]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_10 given-name" size="10" data-component="first" aria-labelledby="label_10 sublabel_10_first" required="" value="" /><label class="form-sub-label" for="first_10" id="sublabel_10_first" style="min-height:13px">First Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_10" name="q10_fullName[last]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_10 family-name" size="15" data-component="last" aria-labelledby="label_10 sublabel_10_last" required="" value="" /><label class="form-sub-label" for="last_10" id="sublabel_10_last" style="min-height:13px">Last Name</label></span></div>
+            </div>
+          </li>
+          <li class="form-line jf-required" data-type="control_email" id="id_11"><label class="form-label form-label-top form-label-auto" id="label_11" for="input_11" aria-hidden="false"> Email Address<span class="form-required">*</span> </label>
+            <div id="cid_11" class="form-input-wide jf-required" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="email" id="input_11" name="q11_emailAddress" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_11 email" style="width:30px" size="30" data-component="email" aria-labelledby="label_11 sublabel_input_11" required="" value="" /><label class="form-sub-label" for="input_11" id="sublabel_input_11" style="min-height:13px">example@example.com</label></span> </div>
+          </li>
+          <li class="form-line" data-type="control_phone" id="id_12"><label class="form-label form-label-top form-label-auto" id="label_12" for="input_12_full"> Phone Number </label>
+            <div id="cid_12" class="form-input-wide" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="tel" id="input_12_full" name="q12_phoneNumber[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_12 tel-national" style="width:310px" data-masked="true" placeholder="(000) 000-0000" data-component="phone" aria-labelledby="label_12 sublabel_12_masked" value="" /><label class="form-sub-label" for="input_12_full" id="sublabel_12_masked" style="min-height:13px">Please enter a valid phone number.</label></span> </div>
+          </li>
+          <li class="form-line jf-required" data-type="control_address" id="id_13"><label class="form-label form-label-top" id="label_13" for="input_13_addr_line1" aria-hidden="false"> Address Information<span class="form-required">*</span> </label>
+            <div id="cid_13" class="form-input-wide jf-required" data-layout="full">
+              <div summary="" class="form-address-table jsTest-addressField">
+                <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_13_addr_line1" name="q13_address[addr_line1]" class="form-textbox validate[required] form-address-line" data-defaultvalue="" autoComplete="section-input_13 address-line1" data-component="address_line_1" aria-labelledby="label_13 sublabel_13_addr_line1" required="" value="" /><label class="form-sub-label" for="input_13_addr_line1" id="sublabel_13_addr_line1" style="min-height:13px">Street Address</label></span></span></div>
+                <div class="form-address-line-wrapper jsTest-address-line-wrapperField" style="display:none"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_13_addr_line2" name="q13_address[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_13 off" data-component="address_line_2" aria-labelledby="label_13 sublabel_13_addr_line2" required="" value="" /><label class="form-sub-label" for="input_13_addr_line2" id="sublabel_13_addr_line2" style="min-height:13px">Street Address Line 2</label></span></span></div>
+                <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-city-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_13_city" name="q13_address[city]" class="form-textbox validate[required] form-address-city" data-defaultvalue="" autoComplete="section-input_13 address-level2" data-component="city" aria-labelledby="label_13 sublabel_13_city" required="" value="" /><label class="form-sub-label" for="input_13_city" id="sublabel_13_city" style="min-height:13px">City</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><select class="form-dropdown validate[required] form-address-state" name="q13_address[state]" id="input_13_state" data-component="state" required="" aria-labelledby="label_13 sublabel_13_state" autoComplete="section-input_13 address-level1">
+                        <option selected="" value="">Please Select</option>
+                        <option value="Alabama">Alabama</option>
+                        <option value="Alaska">Alaska</option>
+                        <option value="Arizona">Arizona</option>
+                        <option value="Arkansas">Arkansas</option>
+                        <option value="California">California</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Connecticut">Connecticut</option>
+                        <option value="Delaware">Delaware</option>
+                        <option value="District of Columbia">District of Columbia</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Hawaii">Hawaii</option>
+                        <option value="Idaho">Idaho</option>
+                        <option value="Illinois">Illinois</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Iowa">Iowa</option>
+                        <option value="Kansas">Kansas</option>
+                        <option value="Kentucky">Kentucky</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="Maine">Maine</option>
+                        <option value="Maryland">Maryland</option>
+                        <option value="Massachusetts">Massachusetts</option>
+                        <option value="Michigan">Michigan</option>
+                        <option value="Minnesota">Minnesota</option>
+                        <option value="Mississippi">Mississippi</option>
+                        <option value="Missouri">Missouri</option>
+                        <option value="Montana">Montana</option>
+                        <option value="Nebraska">Nebraska</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="New Hampshire">New Hampshire</option>
+                        <option value="New Jersey">New Jersey</option>
+                        <option value="New Mexico">New Mexico</option>
+                        <option value="New York">New York</option>
+                        <option value="North Carolina">North Carolina</option>
+                        <option value="North Dakota">North Dakota</option>
+                        <option value="Ohio">Ohio</option>
+                        <option value="Oklahoma">Oklahoma</option>
+                        <option value="Oregon">Oregon</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="Rhode Island">Rhode Island</option>
+                        <option value="South Carolina">South Carolina</option>
+                        <option value="South Dakota">South Dakota</option>
+                        <option value="Tennessee">Tennessee</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Utah">Utah</option>
+                        <option value="Vermont">Vermont</option>
+                        <option value="Virginia">Virginia</option>
+                        <option value="Washington">Washington</option>
+                        <option value="West Virginia">West Virginia</option>
+                        <option value="Wisconsin">Wisconsin</option>
+                        <option value="Wyoming">Wyoming</option>
+                      </select><label class="form-sub-label" for="input_13_state" id="sublabel_13_state" style="min-height:13px">State</label></span></span></div>
+                <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-zip-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_13_postal" name="q13_address[postal]" class="form-textbox validate[required] form-address-postal" data-defaultvalue="" autoComplete="section-input_13 postal-code" data-component="zip" aria-labelledby="label_13 sublabel_13_postal" required="" value="" /><label class="form-sub-label" for="input_13_postal" id="sublabel_13_postal" style="min-height:13px">Zip Code</label></span></span></div>
+              </div>
+            </div>
+          </li>
+          <li class="form-line jf-required" data-type="control_dropdown" id="id_17"><label class="form-label form-label-top form-label-auto" id="label_17" for="input_17" aria-hidden="false"> 3D Printed Objects<span class="form-required">*</span> </label>
+            <div id="cid_17" class="form-input-wide jf-required" data-layout="half"> <select class="form-dropdown validate[required]" id="input_17" name="q17_3dPrinted18" style="width:310px" data-component="dropdown" required="" aria-label="3D Printed Objects">
+                <option value="">Please Select</option>
+                <option value="Wallet - $10.00">Wallet - $10.00</option>
+                <option value="Extendable Axe - $20.00">Extendable Axe - $20.00</option>
+                <option value="Extendable Katana - $15.00">Extendable Katana - $15.00</option>
+                <option value="Vase - $17.00">Vase - $17.00</option>
+                <option value="Rubber Band Gun - $12.00">Rubber Band Gun - $12.00</option>
+                <option value="Toothpick Gun - $12.00">Toothpick Gun - $12.00</option>
+                <option value="Nunchucks - $12.00">Nunchucks - $12.00</option>
+                <option value="Toy Boat - $1.00">Toy Boat - $1.00</option>
+                <option value="Demon Face Replica - $12.00">Demon Face Replica - $12.00</option>
+                <option value="Demon Mask - $30.00">Demon Mask - $30.00</option>
+                <option value="Phone Stand - $7.00">Phone Stand - $7.00</option>
+                <option value="Desktop Organizer A - $15.00">Desktop Organizer A - $15.00</option>
+                <option value="Castle - $25.00">Castle - $25.00</option>
+                <option value="Neuschwanstein Castle - $50.00">Neuschwanstein Castle - $50.00</option>
+                <option value="Mini Skeleton - $10.00">Mini Skeleton - $10.00</option>
+                <option value="Full-Sized Skeleton - $15.00">Full-Sized Skeleton - $15.00</option>
+                <option value="Rotating Rings - $7.00">Rotating Rings - $7.00</option>
+                <option value="Bolt Fidget - $12.00">Bolt Fidget - $12.00</option>
+                <option value="Clicker Fidget - $7.00">Clicker Fidget - $7.00</option>
+                <option value="Dice - $5.00">Dice - $5.00</option>
+                <option value="iPhone 13 Case - $10.00">iPhone 13 Case - $10.00</option>
+                <option value="Extendable Baton - $15.00">Extendable Baton - $15.00</option>
+                <option value="Eiffel Tower - $10.00">Eiffel Tower - $10.00</option>
+                <option value="Orc Mask - $30.00">Orc Mask - $30.00</option>
+                <option value="Unofficial Lego Base Plate - $12.00">Unofficial Lego Base Plate - $12.00</option>
+                <option value="Dice Meteor Hammer - $15.00">Dice Meteor Hammer - $15.00</option>
+                <option value="Pen And Pencil Box - $10.00">Pen And Pencil Box - $10.00</option>
+                <option value="Desk Organizer B - $10.00">Desk Organizer B - $10.00</option>
+                <option value="Egg Holder - $3.00">Egg Holder - $3.00</option>
+                <option value="Zelda Sword - $15.00">Zelda Sword - $15.00</option>
+                <option value="Treasure Chest - $10.00">Treasure Chest - $10.00</option>
+                <option value="USB Holder - $10.00">USB Holder - $10.00</option>
+                <option value="Coaster - $5.00">Coaster - $5.00</option>
+              </select> </div>
+          </li>
+          <li class="form-line" data-type="control_textarea" id="id_18"><label class="form-label form-label-top form-label-auto" id="label_18" for="input_18" aria-hidden="false"> Notes </label>
+            <div id="cid_18" class="form-input-wide" data-layout="full"> <span class="form-sub-label-container" style="vertical-align:top"><textarea id="input_18" class="form-textarea" name="q18_notes" style="width:648px;height:163px" data-component="textarea" aria-labelledby="label_18 sublabel_input_18"></textarea><label class="form-sub-label" for="input_18" id="sublabel_input_18" style="min-height:13px">Notes</label></span> </div>
+          </li>
+          <li class="form-line" data-type="control_button" id="id_16">
+            <div id="cid_16" class="form-input-wide" data-layout="full">
+              <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"><button id="input_16" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">Submit</button></div>
+            </div>
+          </li>
+          <li style="display:none">Should be Empty: <input type="text" name="website" value="" type="hidden" /></li>
+        </ul>
+      </div>
+
+    </form><script type="text/javascript">JotForm.ownerView=true;</script><script type="text/javascript">JotForm.isNewSACL=true;</script>
+</body>
+</html>
+
+
+
+
+
